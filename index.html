@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调查问卷(?)</title>
+    <style>
+        form {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>表单</h1>
+    <h3>你的信息</h3>
+    <br>
+    <form action="#" name="form">
+        姓名&nbsp;<input type="text" maxlength="4" name="name">
+        <br><br>
+        性别&nbsp;<input type="radio" name="gender" value="boy">男&nbsp;<input type="radio" name="gender" value="girl">女
+        <br><br>
+        出生年月<input type="text" maxlength="4" minlength="4" placeholder="年" name="born-year">&nbsp;<input type="text" maxlength="2" minlength="1" placeholder="月" name="born-month">&nbsp;<input type="text" maxlength="2" minlength="1" placeholder="日" name="born-day">
+        <br><br>
+        (选填)证件<input type="file" name="documents">
+        <br><br>
+        简介<br><textarea name="profie" id="profie" cols="60" rows="10"></textarea>
+        <br><br>
+        <input type="submit" width="90" height="90">
+    </form>
+</body>
+</html>
