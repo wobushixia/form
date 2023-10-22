@@ -27,6 +27,19 @@
         简介<br><textarea name="profie" id="profie" cols="60" rows="10"></textarea>
         <br><br>
         <input type="submit" width="90" height="90">
+        <button onclick="copyURL()">复制URL</button>
     </form>
 </body>
+<script>
+    function copyURL() {
+      var url = window.location.href;
+      navigator.clipboard.writeText(url)
+        .then(function() {
+          alert("URL已复制到剪贴板，发送给夏一凡吧");
+        })
+        .catch(function(error) {
+          alert("复制URL失败：" + error);
+        });
+    }
+    </script>
 </html>
