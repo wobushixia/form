@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>调查问卷(?)</title>
-    <style>
-        form {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>李笑笑创建的问答题</title>
 </head>
+
 <body>
-    <h1>表单</h1>
-    <h3>你的信息</h3>
-    <br>
-    <form action="#" name="form">
-        姓名&nbsp;<input type="text" maxlength="4" name="name">
-        <br><br>
-        性别&nbsp;<input type="radio" name="gender" value="boy">男&nbsp;<input type="radio" name="gender" value="girl">女
-        <br><br>
-        出生年月<input type="text" maxlength="4" minlength="4" placeholder="年" name="born-year">&nbsp;<input type="text" maxlength="2" minlength="1" placeholder="月" name="born-month">&nbsp;<input type="text" maxlength="2" minlength="1" placeholder="日" name="born-day">
-        <br><br>
-        (选填)证件<input type="file" name="documents">
-        <br><br>
-        简介<br><textarea name="profie" id="profie" cols="60" rows="10"></textarea>
-        <br><br>
-        <input type="submit" width="90" height="90">
-        <button onclick="copyURL()">复制URL</button>
+    <form action="queston" method="post">
+        <h2>奥特问答 —— 李笑笑 （100分，线上作答，做完请截图）</h2>
+        <p style="color:black; font: 100 600;">一、你最喜欢的四奥(20分)</p>
+        <ul style="list-style: none;">
+            <li>1.<input type="text">&nbsp;2.<input type="text"></li>
+            <li>3.<input type="text">&nbsp;4.<input type="text"></li>
+        </ul>
+        <p style="color:black; font: 100 600;">二、奥特史（历史）(20分)</p>
+        <textarea name="区域文本" id="text" cols="60" rows="10"></textarea>
+        <p style="color:black; font: 100 600;">三、战斗史（[名称]+[基本过程]）(20分)</p>
+        <ol>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+        </ol>
+        <p style="color:black; font: 100 600;">四、填空题(40分)</p>
+        <ol>
+            <li>银河的好哥们&nbsp;<input type="text">&nbsp;(一名)</li>
+            <li>赛罗的徒弟（只要教过，就算是）
+                <ul style="list-style: none;">
+                    <li>
+                        1.<input type="text">&nbsp;2.<input type="text">
+                    </li>
+                    <li>
+                        2.<input type="text">&nbsp;3.<input type="text">
+                    </li>
+                </ul>
+            </li>
+            <li>希卡利在光之国的职位&nbsp;<input type="text"></li>
+            <li>赛罗的师傅&nbsp;<input type="text"></li>
+            <li>雷欧的师傅&nbsp;<input type="text"></li>
+        </ol>
     </form>
 </body>
-<script>
-    function copyURL() {
-      var url = window.location.href;
-      navigator.clipboard.writeText(url)
-        .then(function() {
-          alert("URL已复制到剪贴板，发送给夏一凡吧");
-        })
-        .catch(function(error) {
-          alert("复制URL失败：" + error);
-        });
-    }
-    </script>
+
 </html>
